@@ -1,0 +1,23 @@
+.code-snippet {
+	background-color: #354551;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    padding: 5px 10px 5px 10px;
+}
+
+dd p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.blockquote {
+	font-size: 0.9rem;
+}
+
+.example-image {
+	height: 10%;
+	width: 10%;
+}
+
+.active {
+	background-color: green;
+}
