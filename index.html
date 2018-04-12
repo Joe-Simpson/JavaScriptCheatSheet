@@ -100,7 +100,7 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							
+							Strings in JavaScript are sequences of Unicode characters. More specifically, strings are sequences of UTF-16 code units; each code unit is respresented by a 16-bit number. Each character is represented by 1 or 2 code units.
 						</p>
 					</dd>
 				</dl>
@@ -112,7 +112,27 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							
+							JavaScript has a bollean type, with possible values <code>true</code> and <code>false</code> (both of which are keywords. All values can be converted to boolean under the following set of rules
+							<ul>
+								<li>
+									<code>false</code>, <code>0</code>, empty strings, <code>NaN</code>, <code>Null</code> and <code>undefined</code> are all converted to <code>false</code>
+								</li>
+								<li>
+									All other values are converted to <code>true</code>
+								</li>
+							</ul>
+							You can perform this conversion explicitly using the <code>Boolean()</code> function.
+						</p>
+						<code class="code-snippet">
+							Boolean(0); //false
+							<br>
+							Boolean('123'); //true
+						</code>
+						<p>
+							This conversion is not generally necessary. JavaScript will silently perform this conversion whenever required, when resolving <code>if</code> statements for instance.
+						</p>
+						<p>
+							The generic bollean operators '<a href="#javascript_and">and</a>', '<a href="#javascript_or">or</a>' and '<a href="#javascript_not">not</a>' are all valid in JavaScript.
 						</p>
 					</dd>
 				</dl>
@@ -237,6 +257,9 @@
 						<code class="code-snippet">
 							isNaN(NaN); //true
 						</code>
+						<p>
+							Note: <code>isNaN()</code> will also resolve <code>undefined</code> as <code>true</code>. To truely determine if something is <code>NaN</code>, simply compare it itself.
+						</p>
 					</dd>
 				</dl>
 				<dl class="row" id="javascript_isfinite">
@@ -251,7 +274,9 @@
 						</p>
 						<code class="code-snippet">
 							isFinite(0/1); //false
+							<br>
 							isFinite(-Infinity); //false
+							<br>
 							isFinite(NaN); //false
 						</code>
 					</dd>
@@ -264,7 +289,7 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							You can use the <code><a href="#javascript_parseint">parseInt()</a></code> function to convert a string to a number. Passing in a number as an optional second argument, allows you to specify which base to use.
+							You can use the <code>parseInt()</code> function to convert a string to a number. Passing in a number as an optional second argument, allows you to specify which base to use.
 						</p>
 						<code class="code-snippet">
 							parseInt('010',10); //10
@@ -272,7 +297,7 @@
 							parseInt('010',2);  //2
 						</code>
 						<p>
-							A special value <code><a href="#javascript_isnan">NaN</a></code> (Not a Number) is returned if the string is non-numeric.
+							A special value <code><a href="#javascript_nan">NaN</a></code> (Not a Number) is returned if the string is non-numeric.
 						</p>
 						<code class="code-snippet">
 							parseInt('true',10); //NaN
@@ -288,6 +313,85 @@
 					<dd class="col-sm-8">
 						<p>
 							Unlike its <code><a href="#javascript_parseint">parseInt()</a></code> cousin, <code>parseFloat()</code> always uses base 10.
+						</p>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_and">
+					<dt class="col-sm-4">
+						<p>
+							<code>&amp;&amp;</code> (And)
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							In JavaScript the logical operator <code>&amp;&amp;</code> (And) behaves just like one would expect.
+						</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th scope="col"><code>&amp;&amp;</code></th>
+									<th scope="col"><code>True</code></th>
+									<th scope="col"><code>False</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="col"><code>True</code></th>
+									<td><code>True</code></td>
+									<td><code>False</code></td>
+								</tr>
+								<tr>
+									<th scope="col"><code>False</code></th>
+									<td><code>False</code></td>
+									<td><code>False</code></td>
+								</tr>	
+							</tbody>
+						</table>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_or">
+					<dt class="col-sm-4">
+						<p>
+							<code>||</code> (Or)
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							In JavaScript the logical operator <code>||</code> (Or) behaves just like one would expect.
+						</p>
+						
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th scope="col"><code>||</code></th>
+									<th scope="col"><code>True</code></th>
+									<th scope="col"><code>False</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="col"><code>True</code></th>
+									<td><code>True</code></td>
+									<td><code>True</code></td>
+								</tr>
+								<tr>
+									<th scope="col"><code>False</code></th>
+									<td><code>True</code></td>
+									<td><code>False</code></td>
+								</tr>	
+							</tbody>
+						</table>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_not">
+					<dt class="col-sm-4">
+						<p>
+							<code>!</code> (Not)
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							In JavaScript the logical operator <code>!</code> (Not) behaves just as one would expect. When prepended to a variable or statement, the operator converts <code>False</code> to <code>True</code> and vice versa.
 						</p>
 					</dd>
 				</dl>
