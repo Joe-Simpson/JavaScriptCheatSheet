@@ -168,7 +168,7 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							
+							A value which denotes a deliberate non-value and is only accessible through the <code>null</code> keyword.
 						</p>
 					</dd>
 				</dl>
@@ -180,7 +180,7 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							
+							Indicates an unitialised value. That is to say a value has yet to been assigned. It is possible to declare a variable without assigning a value to it. <code>undefined</code> is technically a constant.
 						</p>
 					</dd>
 				</dl>
@@ -236,6 +236,87 @@
 					<dt class="col-sm-4">
 						<p>
 							<code>NaN</code>
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							
+						</p>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_variables">
+					<dt class="col-sm-4">
+						<p>
+							<code>Variables</code>
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							New variables in Javascript are defined using one of three keywords <code><a href="#javascript_let">let</a></code>, <code><a href="#javascript_const">const</a></code> and <code><a href="#javascript_var">var</a></code>.
+						</p>
+						<p>
+							If you declare a variable without assiging any value to it, the type will be <code><a href="#javascript_undefined">undefined</a></code>.
+						</p>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_let">
+					<dt class="col-sm-4">
+						<p>
+							<code>let</code>
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							<code>let</code> allows you to declare a block-level variable. The variable is available from the block it is enclosed in.
+						</p>
+						<code class="code-snippet">
+							//myVariable <strong>is not</strong> available here
+							<br>
+							for ( let myVariable = 0; myVariable < 5; myVariable++ ) {
+							<br>
+							//myVariable <strong>is</strong> available here
+							<br>
+							}
+						</code>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_const">
+					<dt class="col-sm-4">
+						<p>
+							<code>const</code>
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							<code>const</code> allows you to declare variables whose values are intended to never change. The variable is available from the block it is declared in.
+						</p>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_var">
+					<dt class="col-sm-4">
+						<p>
+							<code>var</code>
+						</p>
+					</dt>
+					<dd class="col-sm-8">
+						<p>
+							<code>var</code> is the original way of declaring a variable in JavaScript and does not have the same restrictions as the other keywords <code><a href="#javascript_let">let</a></code> and <code><a href="#javascript_const">const</a></code>. A variable declared with <code>var</code> is available form the function it is declared in.
+						</p>
+						<code class="code-snippet">
+							//myVariable <strong>is</strong> available here
+							<br>
+							for ( var myVariable = 0; myVariable < 5; myVariable++ ) {
+							<br>
+							//myVariable <strong>is</strong> available here
+							<br>
+							}
+						</code>
+					</dd>
+				</dl>
+				<dl class="row" id="javascript_operators">
+					<dt class="col-sm-4">
+						<p>
+							<code>Operators</code>
 						</p>
 					</dt>
 					<dd class="col-sm-8">
