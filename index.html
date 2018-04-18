@@ -321,7 +321,49 @@
 					</dt>
 					<dd class="col-sm-8">
 						<p>
-							
+							Javascript's numeric operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>%</code> (which represents the remainder operator, not modulo).
+						</p>
+						<p>
+							Values are assigned using <code>=</code>. There are also compound assignment statements, such as <code>+=</code> and <code>-=</code>.
+						</p>
+						<code class="code-snippet">
+							x += 5;
+							<br>
+							x = x + 5;
+						</code>
+						<p>
+							You can use <code>++</code> and <code>--</code> to increment and decrement respectively.
+						</p>
+						<p>
+							The <code>+</code> operator can also be used to concatenate two strings together.
+						</p>
+						<code class="code-snippet">
+							'Hello' + 'World'; //'HelloWorld'
+						</code>
+						<p>
+							If you add a string to a number, or another value, everything is converted to a string first. Adding an empty string to something is a useful way of converting something to a string.
+						</p>
+						<code class="code-snippet">
+							'1' + 2 + 3; //'123'
+							<br>
+							1 + 2 + '3'; //'33'
+						</code>
+						<p>
+							Comparissons can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&le;</code> and <code>&ge;</code>. These work just as one would expect. Equality is a more complicated. The double-equals operator performs type coercion if you give it different types.
+						</p>
+						<code class="code-snippet">
+							123 == '123'; //true
+							<br>
+							1 == true; //true
+						</code>
+						<p>
+							To avoid type coercion, use the triple-equals operator.
+						</p>
+						<code class="code-snippet">
+							123 === '123'; //false
+						</code>
+						<p>
+							There are also <code>!=</code> and <code>!==</code>.
 						</p>
 					</dd>
 				</dl>
